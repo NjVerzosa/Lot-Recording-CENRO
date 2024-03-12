@@ -64,15 +64,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Attempt to execute the prepared statement
         if (mysqli_stmt_execute($stmt)) {
-            // Redirect to index page
             header("location: edit_box.php");
             exit();
         } else {
             echo "Something went wrong. Please try again later.";
         }
-
-        // Close statement
-        mysqli_stmt_close($stmt);
     }
 }
 
